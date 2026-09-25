@@ -1,0 +1,61 @@
+FINAL SHORTCUT SETUP
+
+1. Extract this ZIP.
+
+2. Copy these items into:
+   C:\Users\Adity\BanglaCompiler
+
+   src
+   examples
+   compile_final.bat
+   test_errors.bat
+   GRAMMAR.md
+   FINAL_SETUP.txt
+
+3. Let Windows merge src and examples.
+
+4. Do NOT delete any existing folders:
+   src\lexer
+   src\ast
+   src\parser
+   src\semantic
+   src\codegen
+
+5. In CMD:
+
+   cd C:\Users\Adity\BanglaCompiler
+
+6. Recommended new branch:
+
+   git checkout -b final-integration
+
+7. Run:
+
+   compile_final.bat
+
+Expected final message:
+
+   COMPLETE COMPILER TEST PASSED
+
+8. Optional error demonstrations:
+
+   test_errors.bat
+
+9. After everything passes:
+
+   git add .
+   git commit -m "Complete Bangla compiler integration"
+   git push -u origin final-integration
+
+FINAL PIPELINE
+
+Bangla .bng source
+    -> Lexer
+    -> Tokens
+    -> Parser
+    -> AST
+    -> TypeChecker
+    -> JavaGenerator
+    -> generated\GeneratedProgram.java
+    -> javac
+    -> runnable Java class
