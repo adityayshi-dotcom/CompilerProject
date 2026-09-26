@@ -1,0 +1,50 @@
+SHORTCUT TYPE CHECKER SETUP
+
+1. Extract this ZIP.
+
+2. Copy these items into your existing:
+   C:\Users\Adity\BanglaCompiler
+
+   src
+   tests
+   compile_typechecker.bat
+   TYPECHECKER_SETUP.txt
+
+3. Let Windows merge folders.
+
+4. Do NOT delete src\lexer, src\ast, or src\parser.
+
+5. From CMD:
+
+   cd C:\Users\Adity\BanglaCompiler
+
+6. Run:
+
+   compile_typechecker.bat
+
+EXPECTED OUTPUT:
+
+Compilation successful.
+
+Valid program test passed.
+Type mismatch test passed.
+Semantic error: Cannot assign STRING to INT variable 'বয়স'.
+Undeclared variable test passed.
+Semantic error: Variable 'x' is not declared.
+Invalid arithmetic test passed.
+Semantic error: Operator '+' requires INT operands.
+Invalid condition test passed.
+Semantic error: if condition must be BOOLEAN, but found INT.
+
+All type checker tests passed.
+
+SUPPORTED SEMANTIC CHECKS:
+
+- integer variables
+- string variables
+- duplicate declarations
+- undeclared variables
+- assignment type checking
+- arithmetic requires integers
+- comparisons produce boolean
+- if/while conditions must be boolean

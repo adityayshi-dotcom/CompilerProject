@@ -1,0 +1,39 @@
+SHORTCUT PARSER SETUP
+
+1. Extract this ZIP.
+2. Copy the contents into:
+   C:\Users\Adity\BanglaCompiler
+
+   Allow Windows to merge the src and tests folders.
+   Existing Expression.java, Statement.java, and LiteralExpression.java
+   may be replaced by the versions in this pack.
+
+3. Do NOT delete or replace the src\lexer folder.
+
+4. From CMD:
+   cd C:\Users\Adity\BanglaCompiler
+
+5. Run:
+   compile_parser.bat
+
+Expected result:
+
+Complete program test passed.
+Precedence test passed.
+Syntax error recovery test passed.
+Syntax error at line 1, column 14: Expected expression.
+
+All parser tests passed.
+
+The parser supports the minimal project requirements:
+- variable declarations
+- assignments
+- integer/string literals
+- Bangla/English identifiers
+- + - * /
+- operator precedence
+- == != < <= > >=
+- যদি / নাহলে
+- যতক্ষণ
+- blocks
+- basic syntax error recovery

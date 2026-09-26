@@ -1,0 +1,69 @@
+SHORTCUT JAVA CODE GENERATOR SETUP
+
+1. Extract this ZIP.
+
+2. Copy these items into your existing project:
+   C:\Users\Adity\BanglaCompiler
+
+   src
+   tests
+   compile_codegen.bat
+   CODEGEN_SETUP.txt
+
+3. Let Windows merge the folders.
+
+4. Do NOT delete:
+   src\lexer
+   src\ast
+   src\parser
+   src\semantic
+
+5. In CMD:
+
+   cd C:\Users\Adity\BanglaCompiler
+
+6. Recommended new branch:
+
+   git checkout -b codegen
+
+7. Run:
+
+   compile_codegen.bat
+
+EXPECTED OUTPUT:
+
+Project compilation successful.
+
+Basic generation test passed.
+Control-flow generation test passed.
+
+All Java generator tests passed.
+
+Compiling generated Java program...
+Generated Java compiled successfully.
+Generated Java ran successfully.
+
+Code generation stage passed completely.
+
+WHAT THIS STAGE DOES
+
+Bangla source
+  -> Lexer
+  -> Parser / AST
+  -> TypeChecker
+  -> JavaGenerator
+  -> GeneratedProgram.java
+  -> javac
+  -> runnable Java class
+
+SUPPORTED GENERATION
+
+- সংখ্যা -> int
+- লেখা -> String
+- variable declarations
+- assignments
+- + - * /
+- comparisons
+- if / else
+- while
+- Bangla identifiers
